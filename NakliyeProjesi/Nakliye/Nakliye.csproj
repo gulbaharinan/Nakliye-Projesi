@@ -96,7 +96,9 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\stylesheet.css" />
     <Content Include="Content\font\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\diyarbakir-evden-eve-nakliyat-esya-paketleme.jpg" />
     <Content Include="Content\images\expertiz.jpg" />
+    <Content Include="Content\images\indir %281%29.jpg" />
     <Content Include="Content\images\Nakliye1.png" />
     <Content Include="Content\images\Nakliye2.png" />
     <Content Include="Content\images\Nakliye3.png" />
