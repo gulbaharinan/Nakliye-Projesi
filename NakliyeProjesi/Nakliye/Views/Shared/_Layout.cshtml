@@ -3,117 +3,272 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
-    <script src="~/Content/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link href="~/Content/css/stylesheet.css" rel="stylesheet" />
-
-
+    <!--=== Bootstrap CSS ===-->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--=== Slicknav CSS ===-->
+    <link href="~/assets/css/plugins/slicknav.min.css" rel="stylesheet" />
+    <!--=== Magnific Popup CSS ===-->
+    <link href="~/assets/css/plugins/magnific-popup.css" rel="stylesheet" />
+    <!--=== Owl Carousel CSS ===-->
+    <link href="~/assets/css/plugins/owl.carousel.min.css" rel="stylesheet" />
+    <!--=== Gijgo CSS ===-->
+    <link href="~/assets/css/plugins/gijgo.css" rel="stylesheet" />
+    <!--=== FontAwesome CSS ===-->
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" />
+    <!--=== Theme Reset CSS ===-->
+    <link href="~/assets/css/reset.css" rel="stylesheet" />
+    <!--=== Main Style CSS ===-->
+    <link href="~/assets/style.css" rel="stylesheet" />
+    <!--=== Responsive CSS ===-->
+    <link href="~/assets/css/responsive.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-4">
-            <a class="navbar-brand" href="#">LOGO</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_icerik">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+      <!--== Header Area Start ==-->
+    <header id="header-area" class="fixed-top">     
+        <!--== Header Bottom Start ==-->
+        <div id="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <!--== Logo Start ==-->
+                    <div class="col-lg-4">
+                        <a href="index.html" class="logo">
+                            <img src="~/assets/img/logo.png" alt="JSOFT">
+                        </a>
+                    </div>
+                    <!--== Logo End ==-->
 
-            <div class="collapse navbar-collapse" id="navbar_icerik">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item nav-link">@Html.ActionLink("ANASAYFA", "Index", "Home")</li>
-                    <li class="nav-item nav-link">@Html.ActionLink("HAKKIMIZDA", "Hakkimizda", "Home")</li>
-                    <li class="nav-item nav-link">@Html.ActionLink("İLETİŞİM", "Iletisim", "Home")</li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-success">Giriş Yap</button>
-
-                    <button class="btn btn-success">Kayıt Ol</button>
-                </form>
+                  <!--== Main Menu Start ==-->
+                <div class="col-lg-8 d-none d-xl-block">
+                    <nav class="mainmenu">
+                        <ul>
+                            <li class="active">
+                                @Html.ActionLink("Anasayfa", "Index", "Home")
+                            </li>
+                            <li>@Html.ActionLink("Hakkımızda", "Hakkimizda", "Home")</li>
+                            <li>@Html.ActionLink("Referanslarımız", "Hakkimizda", "Home")</li>
+                            <li>@Html.ActionLink("İletişim", "Iletisim", "Home")</li>
+                            <li><button class="book-now-btn">Giris Yap</button></li>
+                            <li><button class="book-now-btn">Kayıt Ol</button></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--== Main Menu End ==-->
+                </div>
             </div>
-        </nav>
-    </div>
+        </div>
+        <!--== Header Bottom End ==-->
+    </header>
+    <!--== Header Area End ==-->
+ 
+    <!--== Slider Area Start ==-->
+    <section id="slider-area">
+        <!--== slide Item One ==-->
+        <div class="single-slide-item overlay">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-7 text-right">
+                        <div class="display-table">
+                            <div class="display-table-cell">
+                                <div class="slider-right-text">
+                                    <h1>NAKLİYECİ BUL</h1>
+                                    <p>TAŞINMAK İÇİN UYGUN FİYATA <br> KOLAY REZERVASYON </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== slide Item One ==-->
+    </section>
+    <!--== Slider Area End ==-->
     <div class="container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+        <div class="row">
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+            <!-- Single Sidebar Start -->
+            <div class="single-sidebar col-md-3 float-right">
+                <h3>Müşteri Memnuniyeti</h3>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="~/Content/images/expertiz.jpg" />
-                    <div class="carousel-caption">
-                        <h3>Özenle Evden Eve Nakliye</h3>
-                        <p>Güvenilir nakliyeciler ile sabit fiyat garantisi evinizi sorunsuz taşıyın.</p>
-                    </div>
+                <div class="sidebar-body">
+                    <ul class="recent-tips">
+                        <li class="single-recent-tips">
+                            <div class="recent-tip-thum">
+                                <a href="#"><img src="~/assets/img/we-do/service1-img.png" alt="JSOFT"></a>
+                            </div>
+                            <div class="recent-tip-body">
+                                <h4><a href="#">How to Enjoy Losses Angeles Car Rentals</a></h4>
+                                <span class="date">February 5, 2018</span>
+                            </div>
+                        </li>
+
+                        <li class="single-recent-tips">
+                            <div class="recent-tip-thum">
+                                <a href="#"><img src="~/assets/img/we-do/service3-img.png" alt="JSOFT"></a>
+                            </div>
+                            <div class="recent-tip-body">
+                                <h4><a href="#">How to Enjoy Losses Angeles Car Rentals</a></h4>
+                                <span class="date">February 5, 2018</span>
+                            </div>
+                        </li>
+
+                        <li class="single-recent-tips">
+                            <div class="recent-tip-thum">
+                                <a href="#"><img src="~/assets/img/we-do/service2-img.png" alt="JSOFT"></a>
+                            </div>
+                            <div class="recent-tip-body">
+                                <h4><a href="#">How to Enjoy Losses Angeles Car Rentals</a></h4>
+                                <span class="date">February 5, 2018</span>
+                            </div>
+                        </li>
+
+                        <li class="single-recent-tips">
+                            <div class="recent-tip-thum">
+                                <a href="#"><img src="~/assets/img/we-do/service3-img.png" alt="JSOFT"></a>
+                            </div>
+                            <div class="recent-tip-body">
+                                <h4><a href="#">How to Enjoy Losses Angeles Car Rentals</a></h4>
+                                <span class="date">February 5, 2018</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+            <!-- Single Sidebar End -->
 
-                <div class="item">
-                    <img src="~/Content/images/nakliyecim1.jpg" />
-                    <div class="carousel-caption">
-                        <h3>Profesyonel Taşıma</h3>
-                        <p>Nakliye ekipleri ile yüz yüze görüşüp gerekli evraklarını ve referansları kontrol ediliyor. </p>
+        </div>
+
+    </div>
+    <section id="footer-area">
+        <!-- Footer Widget Start -->
+        <div class="footer-widget-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget Start -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>About Us</h2>
+                            <div class="widget-body">
+                                <img src="~/assets/img/logo.png" alt="JSOFT">
+                                <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
+
+                                <div class="newsletter-area">
+                                    <form action="index.html">
+                                        <input type="email" placeholder="Subscribe Our Newsletter">
+                                        <button type="submit" class="newsletter-btn"><i class="fa fa-send"></i></button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <!-- Single Footer Widget End -->
+                    <!-- Single Footer Widget Start -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>Recent Posts</h2>
+                            <div class="widget-body">
+                                <ul class="recent-post">
+                                    <li>
+                                        <a href="#">
+                                            Hello Bangladesh!
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Hello Bangladesh!
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            consectetur adipisicing elit?
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget End -->
+                    <!-- Single Footer Widget Start -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>get touch</h2>
+                            <div class="widget-body">
+                                <p>Lorem ipsum doloer sited amet, consectetur adipisicing elit. nibh auguea, scelerisque sed</p>
 
-                <div class="item">
-                    <img src="~/Content/images/nakliyecim2.jpg" />
-                    <div class="carousel-caption">
-                        <h3>Eşyana uygun araç tiplerimiz</h3>
-                        <p>Sisteme kayıt olan nakliye firmalarının ekipleri ve araçlarının yaşı, donanımı, yeterlilikleri kontrol edilir.</p>
+                                <ul class="get-touch">
+                                    <li><i class="fa fa-map-marker"></i> 800/8, Kazipara, Dhaka</li>
+                                    <li><i class="fa fa-mobile"></i> +880 01 86 25 72 43</li>
+                                    <li><i class="fa fa-envelope"></i> kazukamdu83@gmail.com</li>
+                                </ul>
+                                <a href="https://goo.gl/maps/b5mt45MCaPB2" class="map-show" target="_blank">Show Location</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget End -->
+                </div>
+            </div>
+        </div>
+        <!-- Footer Widget End -->
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
                 </div>
             </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
-    </div>
-    <div class="container">
-        <div class="col-md-9">
-            @RenderBody()
-        </div>
-        <div class="col-md-3">
-            <div class="float-right">
-                <div class="clContent">
-                    <div class="col-md-2">
-                        <img src="~/Content/images/yorumgörsel.jpg" width="40"/>
+        <!-- Footer Bottom End -->
+    </section>
+    
+    <!--=======================Javascript============================-->
+    <!--=== Jquery Min Js ===-->
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <!--=== Jquery Migrate Min Js ===-->
+    <script src="~/assets/js/jquery-migrate.min.js"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="~/assets/js/popper.min.js"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <!--=== Gijgo Min Js ===-->
+    <script src="~/assets/js/plugins/gijgo.js"></script>
+    <!--=== Vegas Min Js ===-->
+    <script src="~/assets/js/plugins/vegas.min.js"></script>
+    <!--=== Isotope Min Js ===-->
+    <script src="~/assets/js/plugins/isotope.min.js"></script>
+    <!--=== Owl Caousel Min Js ===-->
+    <script src="~/assets/js/plugins/owl.carousel.min.js"></script>
+    <!--=== Waypoint Min Js ===-->
+    <script src="~/assets/js/plugins/waypoints.min.js"></script>
+    <!--=== CounTotop Min Js ===-->
+    <script src="~/assets/js/plugins/counterup.min.js"></script>
+    <!--=== YtPlayer Min Js ===-->
+    <script src="~/assets/js/plugins/mb.YTPlayer.js"></script>
+    <!--=== Magnific Popup Min Js ===-->
+    <script src="~/assets/js/plugins/magnific-popup.min.js"></script>
+    <!--=== Slicknav Min Js ===-->
+    <script src="~/assets/js/plugins/slicknav.min.js"></script>
 
-                    </div>
-                    <div class="col-md-9">
-                        <h3>Kübra Hanım:</h3>
-                        <p>Ev Sahibi</p>
-                        <p>Çalıştığımız arkadaşlar tüm isteklerimizi eksiksiz yerine getirdiler,çok memnun kaldık.</p>
-                    </div>
-
-                </div>
-                <div class="clContent">
-                    <div class="col-md-2">
-                        <img src="~/Content/images/yorumgörsel.jpg" width="40" />
-                    </div>
-                    <div class="col-md-9">
-                        <h3>Kübra Hanım:</h3>
-                        <p>Ev Sahibi</p>
-                        <p>Çalıştığımız arkadaşlar tüm isteklerimizi eksiksiz yerine getirdiler,çok memnun kaldık.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class=" bg-dark">FOOTER</footer>
+    <!--=== Mian Js ===-->
+    <script src="~/assets/js/main.js"></script>
 </body>
 </html>

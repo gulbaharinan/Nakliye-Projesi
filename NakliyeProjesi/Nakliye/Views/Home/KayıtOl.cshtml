@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Log-in</title>
+    <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="login-card">
+        <h1>Giriş Yap</h1><br>
+        <form action="~/Views/Home/Index.cshtml">
+            <input type="text" name="user" placeholder="Kullanıcı Adı...">
+            <input type="password" name="pass" placeholder="Şifre...">
+            <input type="submit" name="GirisYap" class="login login-submit" value="Giriş Yap">
+        </form>
+        <div class="login-help">
+            <a href="#">Kayıt Ol</a> • <a href="#">Şifremi Unuttum</a>
+        </div>
+    </div>
+
+</body>
+</html>

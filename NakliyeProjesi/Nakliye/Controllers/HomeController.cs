@@ -21,5 +21,10 @@ namespace Nakliye.Controllers
         {
             return View();
         }
+
+        public ActionResult GirisYap()
+        {
+            return View();
+        }
     }
 }
