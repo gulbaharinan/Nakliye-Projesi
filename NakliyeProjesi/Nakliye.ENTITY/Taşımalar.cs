@@ -11,7 +11,7 @@ namespace Nakliye.ENTITY
         [Key]
         public int TaşımaID { get; set; }
 
-        public int MüsteriID { get; set; }
+        public int MusteriID { get; set; }
 
         public int NakliyeciID { get; set; }
 
@@ -21,7 +21,7 @@ namespace Nakliye.ENTITY
 
         public virtual Adresler Adresler { get; set; }
 
-        public virtual Müsteriler Müsteriler { get; set; }
+        public virtual Musteriler Musteriler { get; set; }
 
         public virtual Nakliyeciler Nakliyeciler { get; set; }
     }

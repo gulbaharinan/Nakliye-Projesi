@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nakliye.BLL;
+using Nakliye.ENTITY;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +27,18 @@ namespace Nakliye.Controllers
         {
             return View();
         }
-     
+
+        public ActionResult KayıtOl()
+        {       
+            return View();
+        }
+        [HttpPost]
+        public ActionResult KayıtOl(Musteriler musteri)
+        {
+            MusteriBLL musteribll = new MusteriBLL();
+            musteribll.AddCustomers(musteri);
+            return RedirectToAction("Index");
+        }
+
     }
 }

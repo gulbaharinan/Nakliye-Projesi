@@ -16,6 +16,6 @@ namespace Nakliye.ENTITY
 
         public virtual Adresler Adresler { get; set; }
 
-        public virtual Müsteriler Müsteriler { get; set; }
+        public virtual Musteriler Musteriler { get; set; }
     }
 }

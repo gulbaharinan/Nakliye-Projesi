@@ -6,27 +6,27 @@ namespace Nakliye.ENTITY
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Müsteriler
+    public partial class Musteriler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Müsteriler()
+        public Musteriler()
         {
             MusteriAdres = new HashSet<MusteriAdres>();
             Taşımalar = new HashSet<Taşımalar>();
         }
 
         [Key]
-        public int MüsteriID { get; set; }
+        public int MusteriID { get; set; }
 
         public int AdresID { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string MüsteriAdı { get; set; }
+        public string MusteriAdi { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string MüsteriSoyadı { get; set; }
+        public string MusteriSoyadi { get; set; }
 
         [StringLength(10)]
         public string Password { get; set; }
@@ -37,6 +37,11 @@ namespace Nakliye.ENTITY
         [Required]
         [StringLength(50)]
         public string EMail { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string KullaniciAdi { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MusteriAdres> MusteriAdres { get; set; }

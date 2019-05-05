@@ -16,7 +16,7 @@
 
         public virtual DbSet<Adresler> Adresler { get; set; }
         public virtual DbSet<MusteriAdres> MusteriAdres { get; set; }
-        public virtual DbSet<Müsteriler> Müsteriler { get; set; }
+        public virtual DbSet<Musteriler> Musteriler { get; set; }
         public virtual DbSet<Nakliyeciler> Nakliyeciler { get; set; }
         public virtual DbSet<Photo> Photo { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -34,15 +34,15 @@
                 .WithRequired(e => e.Adresler)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Müsteriler>()
+            modelBuilder.Entity<Musteriler>()
                 .HasMany(e => e.MusteriAdres)
-                .WithRequired(e => e.Müsteriler)
+                .WithRequired(e => e.Musteriler)
                 .HasForeignKey(e => e.MusteriID)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Müsteriler>()
+            modelBuilder.Entity<Musteriler>()
                 .HasMany(e => e.Taşımalar)
-                .WithRequired(e => e.Müsteriler)
+                .WithRequired(e => e.Musteriler)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Nakliyeciler>()

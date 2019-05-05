@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Adresler.cs" />
     <Compile Include="MusteriAdres.cs" />
-    <Compile Include="Müsteriler.cs" />
+    <Compile Include="Musteriler.cs" />
     <Compile Include="Nakliyeciler.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

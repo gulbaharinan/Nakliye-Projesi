@@ -182,7 +182,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MusteriController.cs" />
     <Compile Include="Controllers\NakliyeciController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,7 +201,7 @@
     <Content Include="Views\Home\Iletisim.cshtml" />
     <Content Include="Views\Home\GirisYap.cshtml" />
     <Content Include="Views\Nakliyeci\Getir.cshtml" />
-    <Content Include="Views\Musteri\KayıtOl.cshtml" />
+    <Content Include="Views\Home\KayıtOl.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
