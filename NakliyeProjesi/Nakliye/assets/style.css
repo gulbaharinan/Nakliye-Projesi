@@ -94,7 +94,7 @@
 }
 
 .section-padding {
-	padding: 100px 0;
+	padding: 30px 0;
 }
 
 .section-title {
@@ -164,7 +164,8 @@
 
 #header-area,
 #header-area a {
-	color: #fff;
+    color: #fff;
+    height:57px;
 }
 
 #header-top {
@@ -172,11 +173,11 @@
 	padding: 8px 0;
 }
 
-#header-top i {
-	color: #ffd000;
-	font-size: 15px;
-	margin-right: 2px;
-}
+    #header-top i {
+        color: #ffd000;
+        font-size: 13px;
+        margin-right: 2px;
+    }
 
 #header-area .header-social-icons a i.fa {
 	color: #fff;
@@ -205,6 +206,9 @@ header.fixTotop #header-top {
 	padding: 15px 0;
 	-webkit-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
+   height:72px;
+
+   
 }
 
 header.fixTotop #header-bottom {
@@ -432,16 +436,18 @@ a.slicknav_btn {
 
 .book-now-btn {
 	background-color: #ffd000;
-	color: #222;
+	color: rgba(0, 0, 0, 1);
 	display: inline-block;
 	font-size: 15px;
 	font-weight: 600;
     text-align:center;
-	padding: 12px 10px;
+	padding: 15px 10px;
     margin-left:5px;
 	border: none;
 	cursor: pointer;
 	text-transform: uppercase;
+    width:90px;
+    height:150px;
 }
 
 .book-now-btn:focus {
@@ -2913,9 +2919,10 @@ body,
 .login-page-content {
 	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-	padding-bottom: 35px;
+	padding-bottom: 25px;
 	text-align: center;
 	border-radius: 3px;
+    width:400px;
 }
 
 .login-form {
@@ -2996,7 +3003,7 @@ body,
 	background: -webkit-gradient(linear, left top, left bottom, from(#3b5998), to(#344e86));
 	background: linear-gradient(to bottom, #3b5998, #344e86);
 	border-radius: 3px;
-	color: #fff;
+	color: rgba(0, 0, 0, 1);
 	display: block;
 	font-size: 16px;
 	font-weight: 600;
