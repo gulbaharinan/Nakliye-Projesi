@@ -21,14 +21,10 @@ namespace Nakliye.Controllers
         {
             return View();
         }
-        
         public ActionResult GirisYap()
         {
             return View();
         }
-        public ActionResult KayıtOl()
-        {
-            return View();
-        }
+     
     }
 }

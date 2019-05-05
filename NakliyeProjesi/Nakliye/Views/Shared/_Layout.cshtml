@@ -32,8 +32,8 @@
                 <div class="row">
                     <!--== Logo Start ==-->
                     <div class="col-lg-4">
-                        <a href="index.html" class="logo">
-                            <img src="~/assets/img/logoooo.png" alt="JSOFT">
+                        <a href="Index.cshtml">
+                        <img src="~/assets/img/logoooo.png" alt="JSOFT">
                         </a>
                     </div>
                     <!--== Logo End ==-->
@@ -45,10 +45,10 @@
                                     @Html.ActionLink("Anasayfa", "Index", "Home")
                                 </li>
                                 <li>@Html.ActionLink("Hakkımızda", "Hakkimizda", "Home")</li>
-                                <li>@Html.ActionLink("Referanslarımız", "Hakkimizda", "Home")</li>
+                                <li>@Html.ActionLink("Nakliyeciler", "Getir", "Nakliyeci")</li>
                                 <li>@Html.ActionLink("İletişim", "Iletisim", "Home")</li>
-                                <li>@Html.ActionLink("Giriş Yap", "GirisYap", null, new { @class = "book-now-btn" })</li>
-                                <li>@Html.ActionLink("Kayıt Ol", "KayıtOl", null, new { @class = "book-now-btn" })</li>
+                                <li>@Html.ActionLink("Giriş Yap", "GirisYap", "Musteri", new { @class = "book-now-btn" })</li>
+                                <li>@Html.ActionLink("Kayıt Ol", "KayıtOl","Musteri", new { @class = "book-now-btn" })</li>
                             </ul>
                         </nav>
                     </div>
@@ -65,7 +65,6 @@
         <div class="single-slide-item overlay">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-7 text-right">
                         <div class="display-table">
                             <div class="display-table-cell">
@@ -101,7 +100,7 @@
                             <div class="recent-tip-body">
                                 <h5><a href="#">Çalıştığımız arkadaşlar tüm isteklerimizi eksiksiz yerine getirdiler,çok memnun kaldık.</a></h5>
                                 <span class="date">@DateTime.Now</span>
-                                <span class="date float-right">Gülbahar Hanım</span>
+                                <span class=" float-right">Gülbahar Hanım</span>
                             </div>
                         </li>
                         <li class="single-recent-tips">
@@ -110,7 +109,8 @@
                             </div>
                             <div class="recent-tip-body">
                                 <h4><a href="#">Tüm bitkilerimiz ve özel eşyalarımız firmanın emin ellerinde güvenli bir şekilde taşındı,teşekkürler.</a></h4>
-                                <span class="date">February 5, 2018</span>
+                                <span class="date">@DateTime.Now</span>
+                                <span class=" float-right">Fadile Hanım</span>
                             </div>
                         </li>
                         <li class="single-recent-tips">
@@ -118,8 +118,9 @@
                                 <a href="#"><img src="~/assets/img/we-do/person.jpg" alt="JSOFT"></a>
                             </div>
                             <div class="recent-tip-body">
-                                <h4><a href="#">Tüm bitkilerimiz ve özel eşyalarımız firmanın emin ellerinde güvenli bir şekilde taşındı,teşekkürler.</a></h4>
-                                <span class="date">February 5, 2018</span>
+                                <h4><a href="#">Evlenerek ayrıldığım aile evinden kendi evime geçiş için seçtiğim NakliyeciBul en doğru adres oldu. .</a></h4>
+                                <span class="date">@DateTime.Now</span>
+                                <span class=" float-right">Büşra Hanım</span>
                             </div>
                         </li>
                         <li class="single-recent-tips">
@@ -127,8 +128,9 @@
                                 <a href="#"><img src="~/assets/img/we-do/person.jpg" alt="JSOFT"></a>
                             </div>
                             <div class="recent-tip-body">
-                                <h4><a href="#">Tüm bitkilerimiz ve özel eşyalarımız firmanın emin ellerinde güvenli bir şekilde taşındı,teşekkürler.</a></h4>
-                                <span class="date">February 5, 2018</span>
+                                <h4><a href="#">Hiçbir eşyama zarar gelmediği için teşekkür ederim.</a></h4>
+                                <span class="date">@DateTime.Now</span>
+                                <span class="float-right">Kübra Hanım</span>
                             </div>
                         </li>
 

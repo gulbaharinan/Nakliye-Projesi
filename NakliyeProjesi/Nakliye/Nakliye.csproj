@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -176,6 +182,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MusteriController.cs" />
+    <Compile Include="Controllers\NakliyeciController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,8 +200,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Hakkimizda.cshtml" />
     <Content Include="Views\Home\Iletisim.cshtml" />
-    <Content Include="Views\Home\KayıtOl.cshtml" />
     <Content Include="Views\Home\GirisYap.cshtml" />
+    <Content Include="Views\Nakliyeci\Getir.cshtml" />
+    <Content Include="Views\Musteri\KayıtOl.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,6 +213,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nakliye.BLL\Nakliye.BLL.csproj">
+      <Project>{6e9f9e7e-e643-4822-b7c8-9c077905d4ae}</Project>
+      <Name>Nakliye.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nakliye.DAL\Nakliye.DAL.csproj">
+      <Project>{8163ce53-e24c-41dd-be1d-9a552d1c4a0f}</Project>
+      <Name>Nakliye.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nakliye.ENTITY\Nakliye.ENTITY.csproj">
+      <Project>{e128a392-b68c-4ab9-8253-81913f59b84c}</Project>
+      <Name>Nakliye.ENTITY</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
