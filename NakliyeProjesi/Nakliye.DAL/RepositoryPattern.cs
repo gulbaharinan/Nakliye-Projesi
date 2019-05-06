@@ -14,6 +14,12 @@ namespace Nakliye.DAL
         {
             return db.Set<T>().ToList();
         }
+
+        public void Add(T entity)
+        {
+            db.Set<T>().Add(entity);
+            db.SaveChanges();
+        }
       
     }
 }

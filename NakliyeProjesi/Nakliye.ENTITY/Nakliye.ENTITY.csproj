@@ -56,7 +56,6 @@
     <Compile Include="Nakliyeciler.cs" />
     <Compile Include="Photo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagrams.cs" />
     <Compile Include="Taşımalar.cs" />
   </ItemGroup>
   <ItemGroup>

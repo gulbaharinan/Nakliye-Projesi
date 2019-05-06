@@ -4,7 +4,6 @@
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-   
     using Nakliye.ENTITY;
 
     public partial class DataContext : DbContext
@@ -19,7 +18,6 @@
         public virtual DbSet<Musteriler> Musteriler { get; set; }
         public virtual DbSet<Nakliyeciler> Nakliyeciler { get; set; }
         public virtual DbSet<Photo> Photo { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Taşımalar> Taşımalar { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -37,7 +35,6 @@
             modelBuilder.Entity<Musteriler>()
                 .HasMany(e => e.MusteriAdres)
                 .WithRequired(e => e.Musteriler)
-                .HasForeignKey(e => e.MusteriID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Musteriler>()

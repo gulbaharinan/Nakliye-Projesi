@@ -39,12 +39,17 @@
                             </div>
 
                             <div class="password">
-                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Şifre", @class = "form-control" } })
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Şifre", @class = "form-control", type = "password" } })
+                            </div>
+                            <div class="password">
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { placeholder = "Tekrar Şifre", @class = "form-control", type = "password" } })
                             </div>
                             <div class="name">
                                 @Html.EditorFor(model => model.TelNo, new { htmlAttributes = new { placeholder = "Telefon No", @class = "form-control" } })
                             </div>
-
+                            <div class="username">
+                                @Html.EditorFor(model => model.AdresID, new { htmlAttributes = new { placeholder = "AdresID", @class = "form-control" } })
+                            </div>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
                                     <input type="submit" value="Kayıt Ol" class="btn btn-default" />
