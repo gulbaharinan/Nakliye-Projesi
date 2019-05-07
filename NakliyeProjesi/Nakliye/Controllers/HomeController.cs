@@ -23,22 +23,22 @@ namespace Nakliye.Controllers
         {
             return View();
         }
-        public ActionResult GirisYap()
-        {
-            return View();
-        }
+        //public ActionResult GirisYap()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult KayıtOl()
-        {       
-            return View();
-        }
-        [HttpPost]
-        public ActionResult KayıtOl(Musteriler musteri)
-        {
-            MusteriBLL musteribll = new MusteriBLL();
-            musteribll.AddCustomers(musteri);
-            return RedirectToAction("Index");
-        }
+        //public ActionResult KayıtOl()
+        //{       
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult KayıtOl(Musteriler musteri)
+        //{
+        //    MusteriBLL musteribll = new MusteriBLL();
+        //    musteribll.AddCustomers(musteri);
+        //    return RedirectToAction("Index");
+        //}
 
     }
 }
