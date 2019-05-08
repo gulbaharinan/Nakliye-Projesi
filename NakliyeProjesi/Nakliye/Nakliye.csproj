@@ -203,6 +203,7 @@
     <Content Include="Views\Home\GirisYap.cshtml" />
     <Content Include="Views\Nakliyeci\Getir.cshtml" />
     <Content Include="Views\Home\KayıtOl.cshtml" />
+    <Content Include="Views\Nakliyeci\NakliyeciDetay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

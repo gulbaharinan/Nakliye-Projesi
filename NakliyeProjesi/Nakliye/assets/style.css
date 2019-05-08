@@ -162,7 +162,7 @@
 #header-area,
 #header-area a {
     color: #fff;
-    height:57px;
+    height:47px;
 }
 
 #header-top {
@@ -810,6 +810,7 @@ a.slicknav_btn {
 	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	margin-bottom: 30px;
+    height:230px;
 }
 
 .p-car-thumbnails a.car-hover {

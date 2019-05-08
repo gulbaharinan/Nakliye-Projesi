@@ -20,6 +20,12 @@ namespace Nakliye.Controllers
             return View(nakliyeciler);
         }
         #endregion
+        public ActionResult NakliyeciDetay(int id)
+        {
+            Nakliyeciler nakliyeci= nakliyecilerbll.GetNakliyeci(id);
+
+            return View(nakliyeci);
+        }
 
     }
 }

@@ -1,0 +1,51 @@
+﻿@model Nakliye.ENTITY.Nakliyeciler
+
+@{
+    ViewBag.Title = "NakliyeciDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NakliyeciDetay</h2>
+
+<div>
+    <h4>Nakliyeciler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NakliyeSirketininAdı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NakliyeSirketininAdı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NakliyeciTelefon1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NakliyeciTelefon1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NakliyeciSehir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NakliyeciSehir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NakliyeciSemt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NakliyeciSemt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

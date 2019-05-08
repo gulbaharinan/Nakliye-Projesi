@@ -1,4 +1,6 @@
-﻿
+﻿@using Nakliye.ENTITY
+@model List<Nakliyeciler>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -18,7 +20,7 @@
                         <!-- Choose Area Tab Menu -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular_cars" role="tab" aria-selected="true">Nakliyeciler</a>
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="/Home/Login/" role="tab" aria-selected="true">Nakliyeciler</a>
                             </li>
 
                         </ul>
@@ -34,169 +36,28 @@
                                     <!-- PopularCars Tab Content Start -->
                                     <div class="row popular-car-gird">
                                         <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 con suv mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-1.jpg">
-                                                        <img src="~/assets/img/colakoglunakliyat.jpg" />
-                                                    </a>
-                                                </div>
+                                        @foreach (Nakliyeciler item in Model)
+                                        {
+                                            <div class="col-lg-4 col-md-6 hat sedan">
+                                                <div class="single-popular-car">
+                                                    <div class="p-car-thumbnails">
+                                                        @foreach (Photo photo in item.Photo)
+                                                        {
+                                                            <a class="car-hover" href="~/assets/img/@photo.Photo1">
+                                                                <img src="~/assets/img/@photo.Photo1" />
+                                                            </a>
+                                                        }
+                                                    </div>
 
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Çolakoğlu Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-car"></i><a class="car-hover" href=""></a>Detay</span>
-                                                    </h3>
-
+                                                    <div class="p-car-content">
+                                                        <h3>
+                                                            <a href="/Nakliyeci/NakliyeciDetay/@item.NakliyeciID">@item.NakliyeSirketininAdı<br /></a>
+                                                            <span class="price"><i class="fa fa-tag"></i> @item.NakliyeciSemt</span>
+                                                        </h3>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 hat sedan">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/car-2.jpg">
-                                                        <img src="~/assets/img/egeturnakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Egetur<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 suv con mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/car-3.jpg">
-                                                        <img src="~/assets/img/eksioglunakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Ekşioğlu<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 con hat">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="assets/img/car/car-4.jpg">
-                                                        <img src="~/assets/img/gezernakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Gezer<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 con sedan mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-5.jpg">
-                                                        <img src="~/assets/img/hakanistanbulnakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Hakan İstanbul <br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 hat suv mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-6.jpg">
-                                                        <img src="~/assets/img/ikramnakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">İkram<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 hat suv mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-6.jpg">
-
-                                                        <img src="~/assets/img/istanbulnakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">İstanbul<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 hat suv mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-6.jpg">
-                                                        <img src="~/assets/img/tepenakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Tepe <br />Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
-                                        <!-- Single Popular Car Start -->
-                                        <div class="col-lg-4 col-md-6 hat suv mpv">
-                                            <div class="single-popular-car">
-                                                <div class="p-car-thumbnails">
-                                                    <a class="car-hover" href="~/assets/img/car/car-6.jpg">
-                                                        <img src="~/assets/img/toktasnakliyat.jpg" />
-                                                    </a>
-                                                </div>
-
-                                                <div class="p-car-content">
-                                                    <h3>
-                                                        <a href="#">Toktaş<br /> Nakliyat</a>
-                                                        <span class="price"><i class="fa fa-tag"></i> $55/day</span>
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Single Popular Car End -->
+                                        }
                                     </div>
                                     <!-- PopularCars Tab Content End -->
                                 </div>

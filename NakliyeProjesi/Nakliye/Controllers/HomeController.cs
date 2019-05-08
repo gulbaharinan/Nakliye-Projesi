@@ -1,5 +1,6 @@
 ﻿using Nakliye.BLL;
 using Nakliye.ENTITY;
+using Nakliye.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,12 @@ namespace Nakliye.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        NakliyeciBLL nakliyeciBLL = new NakliyeciBLL();
+
         public ActionResult Index()
         {
-            return View();
+            List<Nakliyeciler> nakliyeciler = nakliyeciBLL.GetNakliyecilers();
+            return View(nakliyeciler);
         }
         public ActionResult Hakkimizda()
         {

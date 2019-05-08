@@ -14,7 +14,11 @@ namespace Nakliye.BLL
         public List<Nakliyeciler> GetNakliyecilers()
         {
             return repo.List();
-        }       
+        }
 
+        public Nakliyeciler GetNakliyeci(int id)
+        {
+            return repo.Find(x => x.NakliyeciID == id);
+        }
     }
 }

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="MusteriBLL.cs" />
     <Compile Include="NakliyeciBLL.cs" />
+    <Compile Include="PhotoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
