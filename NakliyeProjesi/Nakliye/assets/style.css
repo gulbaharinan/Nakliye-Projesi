@@ -93,7 +93,16 @@
 	z-index: -1;
 }
 
-
+.info {
+    line-height: 32px;
+    min-height: 38px;
+    padding: 10px 12px 12px 68px;
+    margin: 5px 0;
+}
+.info {
+    background: #e0e5eb url('http://2.bp.blogspot.com/-3rcGQ-VAKb8/UlA4L72c6wI/AAAAAAAAFtY/f__fkV_xBsQ/s1600/info.png') no-repeat 12px 8px;
+    color: #222
+}
 .section-title {
 	font-size: 15px;
 	font-weight: 300;

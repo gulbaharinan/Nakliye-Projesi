@@ -105,7 +105,6 @@
     <Content Include="assets\css\reset.css" />
     <Content Include="assets\css\responsive.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
-    <Content Include="assets\img\404.png" />
     <Content Include="assets\img\colakoglunakliyat.jpg" />
     <Content Include="assets\img\egeturnakliyat.jpg" />
     <Content Include="assets\img\eksioglunakliyat.jpg" />
@@ -122,7 +121,6 @@
     <Content Include="assets\img\Profile\Gulbaharinan.jpg" />
     <Content Include="assets\img\Profile\Fadileavci.jpg" />
     <Content Include="assets\img\Profile\Kubracan.jpg" />
-    <Content Include="assets\img\scroll-top.png" />
     <Content Include="assets\img\tepenakliyat.jpg" />
     <Content Include="assets\img\toktasnakliyat.jpg" />
     <Content Include="assets\js\bootstrap.min.js" />
@@ -147,10 +145,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\NakliyeciController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Mail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
     <Content Include="Views\Nakliyeci\Getir.cshtml" />
     <Content Include="Views\Home\KayıtOl.cshtml" />
     <Content Include="Views\Nakliyeci\NakliyeciDetay.cshtml" />
+    <Content Include="Views\Mail\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -177,7 +179,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nakliye.BLL\Nakliye.BLL.csproj">
