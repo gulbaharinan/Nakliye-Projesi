@@ -106,7 +106,7 @@
     <Content Include="assets\css\responsive.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\img\colakoglunakliyat.jpg" />
-    <Content Include="assets\img\egeturnakliyat.jpg" />
+    <Content Include="assets\img\egeturnakliyat.JPG" />
     <Content Include="assets\img\eksioglunakliyat.jpg" />
     <Content Include="assets\img\gezernakliyat.jpg" />
     <Content Include="assets\img\hakanistanbulnakliyat.jpg" />
