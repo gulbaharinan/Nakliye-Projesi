@@ -103,7 +103,6 @@
             return false;
         }); // Choose Newest Car Isotope End
 
-
         // Choose Car Maginific Popup
         $('.car-hover').magnificPopup({
             type: 'image',
